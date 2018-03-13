@@ -1,0 +1,39 @@
+.body {
+  white-space: nowrap;
+  margin: 0 auto;
+}
+
+.project {
+  display: inline-block;
+  padding: 0 100px;
+  overflow: hidden;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.project:nth-child(odd) {
+  padding-right: 30px;
+}
+
+.project:nth-child(even) {
+  padding-left: 30px;
+}
+
+.img-container {
+  background-color: rgb(230, 234, 238);
+  height: 300px;
+  padding: 25px 20px;
+  box-sizing: border-box;
+  border-radius: 5px 5px 0 0;
+}
+
+.img-holder {
+  height: 100%;
+  background-position: 0;
+  background-size: 100% auto;
+  border-radius: 5px;
+}
+
+.details {
+  border: 1px solid rgb(230, 234, 238);
+}

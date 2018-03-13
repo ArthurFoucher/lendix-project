@@ -1,11 +1,17 @@
 {{#each model as |project|}}
   <article class="project">
-    <h3>{{project.name}}</h3>
-    <div class="detail amount">
-      <span>Amount:</span> {{project.amount}}
+    <div class="img-container">
+      <div class="img-holder" style="background-image: url('https://cdn.lendix.com/{{project.illustration.url}}');">
     </div>
-    <div class="detail country">
-      <span>Country:</span> {{project.business.address.country}}
+    </div>
+    <div class="details">
+      <h3>{{project.name}}</h3>
+      <div class="detail amount">
+        <span>Amount:</span> {{project.amount}}
+      </div>
+      <div class="detail country">
+        <span>Country:</span> {{project.business.address.country}}
+      </div>
     </div>
   </article>
 {{/each}}
