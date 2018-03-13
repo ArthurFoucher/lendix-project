@@ -5,9 +5,9 @@ import { setupApplicationTest } from "ember-qunit";
 module("Acceptance | lendix", function(hooks) {
   setupApplicationTest(hooks);
 
-  test("visiting /", async function(assert) {
+  test("should reroute / to /lendix", async function(assert) {
     await visit("/");
 
-    assert.equal(currentURL(), "/");
+    assert.equal(currentURL(), "/lendix");
   });
 });
