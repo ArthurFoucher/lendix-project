@@ -1,16 +1,35 @@
 {{#each model as |project|}}
   <article class="project">
     <div class="img-container">
-      <div class="img-holder" style={{project-image-style project.illustration.url}}>
-    </div>
+      <div
+        class="img-holder"
+        style={{project-image-style project.illustration.url}} />
     </div>
     <div class="details">
-      <h3>{{project.name}}</h3>
-      <div class="detail amount">
-        <span>Amount:</span> {{project.amount}}
+      <div class="country">
+        <img
+        src={{project-country-flag project.business.address.country}}
+        alt={{project.business.address.country}} />
       </div>
-      <div class="detail country">
-        <span>Country:</span> {{project.business.address.country}}
+      <div class="detail-column detail-column-2">
+        <div class="detail">
+          <h3>
+            {{project.name}}
+          </h3>
+        </div><div class="detail date">
+          {{project-days-ago project.onlineDate }}
+        </div>
+      </div>
+      <div class="detail-column detail-column-3">
+        <div class="detail">
+          {{project.rate}}% · {{project-days-ago project.onlineDate }}
+        </div><div class="detail amount">
+          {{project.amount}}
+        </div><div class="detail grade">
+          <span>
+            {{project.grade}}
+          </span>
+        </div>
       </div>
     </div>
   </article>

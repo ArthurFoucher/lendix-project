@@ -25,7 +25,6 @@ export default Route.extend({
         name: "Osméa",
         loanDuration: 60,
         amount: 291000,
-        totalInvested: 291000,
         onlineDate: "2018-03-12T16:02:57.822Z",
         rate: 7.05,
         grade: "C",
