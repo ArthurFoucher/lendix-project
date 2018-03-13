@@ -1,4 +1,4 @@
-import { helper } from '@ember/component/helper';
+import { helper } from "@ember/component/helper";
 
 const MS_PER_DAY = 1000 * 60 * 60 * 24;
 
@@ -10,11 +10,14 @@ function dateDiffInDays(a, b) {
 }
 
 export function projectDaysAgo(timestamp) {
-  let daysCount = dateDiffInDays(new Date(timestamp), new Date())
-  if (daysCount < 2) {
-    return `${daysCount} day ago`;
-  } else {
-    return `${daysCount} days ago`;
+  let daysCount = dateDiffInDays(new Date(timestamp), new Date());
+  switch (daysCount) {
+    case 0:
+      return "Today";
+    case 1:
+      return `${daysCount} day ago`;
+    default:
+      return `${daysCount} days ago`;
   }
 }
 

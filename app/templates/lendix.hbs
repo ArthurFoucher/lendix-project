@@ -3,12 +3,12 @@
     <div class="img-container">
       <div
         class="img-holder"
-        style={{project-image-style project.illustration.url}} />
+        style={{project-image-style project.illustrationUrl}} />
     </div>
     <div class="details">
       <div class="country">
         <img
-        src={{project-country-flag project.business.address.country}}
+        src={{project-country-flag project.country}}
         alt={{project.business.address.country}} />
       </div>
       <div class="detail-column detail-column-2">
@@ -22,10 +22,11 @@
       </div>
       <div class="detail-column detail-column-3">
         <div class="detail">
-          {{project.rate}}% · {{project-days-ago project.onlineDate }}
+          {{project.rate}}% · {{project.loanDuration}} months
         </div><div class="detail amount">
-          {{project.amount}}
+          {{money-format project.amount}}
         </div><div class="detail grade">
+          <span class={{grade-color project.grade}}></span>
           <span>
             {{project.grade}}
           </span>
