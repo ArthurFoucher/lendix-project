@@ -10,4 +10,14 @@ module("Acceptance | lendix", function(hooks) {
 
     assert.equal(currentURL(), "/lendix");
   });
+
+  test("should list recent projects", async function(assert) {
+    await visit("/");
+
+    assert.equal(
+      this.element.querySelectorAll(".project").length,
+      2,
+      "should display 2 projects"
+    );
+  });
 });

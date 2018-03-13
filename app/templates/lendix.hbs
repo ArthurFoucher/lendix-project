@@ -1,2 +1,11 @@
-<h2>Lendix</h2>
-{{outlet}}
+{{#each model as |project|}}
+  <article class="project">
+    <h3>{{project.name}}</h3>
+    <div class="detail amount">
+      <span>Amount:</span> {{project.amount}}
+    </div>
+    <div class="detail country">
+      <span>Country:</span> {{project.business.address.country}}
+    </div>
+  </article>
+{{/each}}
